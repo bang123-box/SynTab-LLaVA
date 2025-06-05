@@ -105,7 +105,7 @@ model_name_or_path: [Vicuna-v1.5-7B](https://huggingface.co/lmsys/vicuna-7b-v1.5
 
 highres_vision_tower: ConvNeXt-1536 (can be found in the [download checkpoints](https://pan.baidu.com/s/18fdnBRUqjBXYVVGTU8GT2g?pwd=qnva))
 
-lowres_vision_tower: clip-vit-large-patch-336 (can be found in the download checkpoints)
+lowres_vision_tower: clip-vit-large-patch-336 (can be found in the [download checkpoints](https://pan.baidu.com/s/18fdnBRUqjBXYVVGTU8GT2g?pwd=qnva))
 
 
 ```bash
