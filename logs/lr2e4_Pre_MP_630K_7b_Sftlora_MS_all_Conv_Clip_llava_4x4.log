@@ -1,0 +1,219 @@
+[2024-11-08 22:48:20,796] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:22,399] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-08 22:48:22,399] [INFO] [runner.py:571:main] cmd = /opt/conda/envs/llava/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgMywgNCwgNSwgNiwgN119 --master_addr=127.0.0.1 --master_port=20056 --enable_each_rank_log=None llava/train/train_mem.py --lora_enable True --lora_r 128 --lora_alpha 256 --mm_projector_lr 2e-5 --deepspeed ./scripts/zero3.json --model_name_or_path /home/zbb/modelscope/hub/models--lmsys--vicuna-7b-v1.5/snapshots/3321f76e3f527bd14065daf69dad9344000a201d --version v1 --data_path sft.jsonl --image_folder none --highres_vision_tower /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 --lowres_vision_tower /home/zbb/modelscope/hub/clip-vit-large-patch14-336 --pretrain_mm_mlp_adapter pretrained_mm_projector/Pre_MP_630K_7b_Conv_Clip/mm_projector.bin --mm_projector_type mlp2x_gelu --mm_vision_select_layer -2 --mm_use_im_start_end False --mm_use_im_patch_token False --image_aspect_ratio pad --group_by_modality_length True --bf16 True --output_dir ./checkpoints/lr2e4_Pre_MP_630K_7b_Sftlora_MS_all_Conv_Clip_llava_4x4 --num_train_epochs 1 --per_device_train_batch_size 4 --per_device_eval_batch_size 4 --gradient_accumulation_steps 4 --evaluation_strategy no --save_strategy steps --save_steps 6000 --save_total_limit 1 --learning_rate 2e-4 --weight_decay 0. --warmup_ratio 0.03 --lr_scheduler_type cosine --logging_steps 1 --tf32 True --model_max_length 2560 --gradient_checkpointing True --dataloader_num_workers 4 --lazy_preprocess True --report_to none
+[2024-11-08 22:48:24,463] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:25,966] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_PACKAGE_VERSION=2.17.1-1
+[2024-11-08 22:48:25,966] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_DEV_PACKAGE_VERSION=2.17.1-1
+[2024-11-08 22:48:25,966] [INFO] [launch.py:138:main] 0 NCCL_P2P_LEVEL=NVL
+[2024-11-08 22:48:25,966] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_PACKAGE_NAME=libnccl2
+[2024-11-08 22:48:25,966] [INFO] [launch.py:138:main] 0 NCCL_P2P_DISABLE=1
+[2024-11-08 22:48:25,967] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_DEV_PACKAGE_NAME=libnccl-dev
+[2024-11-08 22:48:25,967] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_PACKAGE=libnccl2=2.17.1-1+cuda12.1
+[2024-11-08 22:48:25,967] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_DEV_PACKAGE=libnccl-dev=2.17.1-1+cuda12.1
+[2024-11-08 22:48:25,967] [INFO] [launch.py:138:main] 0 NCCL_VERSION=2.17.1-1
+[2024-11-08 22:48:25,967] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3, 4, 5, 6, 7]}
+[2024-11-08 22:48:25,967] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=8, node_rank=0
+[2024-11-08 22:48:25,967] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3, 4, 5, 6, 7]})
+[2024-11-08 22:48:25,967] [INFO] [launch.py:163:main] dist_world_size=8
+[2024-11-08 22:48:25,967] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+[2024-11-08 22:48:29,077] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:29,156] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:29,179] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:29,198] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:29,208] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:29,219] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:29,286] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:29,293] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-08 22:48:30,324] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-11-08 22:48:30,436] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-11-08 22:48:30,459] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-11-08 22:48:30,460] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-11-08 22:48:30,482] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-11-08 22:48:30,549] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-11-08 22:48:30,549] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-11-08 22:48:30,583] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-11-08 22:48:30,630] [INFO] [comm.py:637:init_distributed] cdb=None
+You are using a model of type llama to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+You are using a model of type llama to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+You are using a model of type llama to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+You are using a model of type llama to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+You are using a model of type llama to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+You are using a model of type llama to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+You are using a model of type llama to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+You are using a model of type llama to instantiate a model of type llava_llama. This is not supported for all configurations of models and can yield errors.
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[2024-11-08 22:48:33,067] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 291, num_elems = 6.74B
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/opt/conda/envs/llava/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/opt/conda/envs/llava/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/opt/conda/envs/llava/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/opt/conda/envs/llava/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/opt/conda/envs/llava/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.58s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.59s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.59s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.60s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.60s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.60s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.72s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.02s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.02s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.39s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.02s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.09s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.09s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.09s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.48s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.09s/it]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:12<00:12, 12.57s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.42s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.34s/it]
+Adding LoRA adapters...
+entering load model, load /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536
+entering load model, load /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536
+entering load model, load /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536
+entering load model, load /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536
+entering load model, load /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536
+entering load model, load /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536
+entering load model, load /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536
+entering load model, load /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536
+[2024-11-08 22:49:15,463] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 691, num_elems = 7.41B
+Some weights of ConvNextModel were not initialized from the model checkpoint at /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 and are newly initialized: ['layernorm.bias', 'layernorm.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of ConvNextModel were not initialized from the model checkpoint at /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 and are newly initialized: ['layernorm.bias', 'layernorm.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of ConvNextModel were not initialized from the model checkpoint at /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 and are newly initialized: ['layernorm.bias', 'layernorm.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of ConvNextModel were not initialized from the model checkpoint at /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 and are newly initialized: ['layernorm.bias', 'layernorm.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of ConvNextModel were not initialized from the model checkpoint at /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 and are newly initialized: ['layernorm.bias', 'layernorm.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of ConvNextModel were not initialized from the model checkpoint at /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 and are newly initialized: ['layernorm.bias', 'layernorm.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of ConvNextModel were not initialized from the model checkpoint at /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 and are newly initialized: ['layernorm.bias', 'layernorm.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+entering load model, load /home/zbb/modelscope/hub/clip-vit-large-patch14-336
+entering load model, load /home/zbb/modelscope/hub/clip-vit-large-patch14-336
+Some weights of ConvNextModel were not initialized from the model checkpoint at /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 and are newly initialized: ['layernorm.bias', 'layernorm.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+entering load model, load /home/zbb/modelscope/hub/clip-vit-large-patch14-336
+entering load model, load /home/zbb/modelscope/hub/clip-vit-large-patch14-336
+entering load model, load /home/zbb/modelscope/hub/clip-vit-large-patch14-336
+entering load model, load /home/zbb/modelscope/hub/clip-vit-large-patch14-336
+entering load model, load /home/zbb/modelscope/hub/clip-vit-large-patch14-336
+entering load model, load /home/zbb/modelscope/hub/clip-vit-large-patch14-336
+[2024-11-08 22:49:17,396] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 1082, num_elems = 7.71B
+Formatting inputs...Skip in lazy mode
+Formatting inputs...Skip in lazy mode
+Formatting inputs...Skip in lazy mode
+/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+Formatting inputs...Skip in lazy mode
+/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+Parameter Offload: Total persistent parameters: 2136768 in 615 params
+  0%|          | 0/15895 [00:00<?, ?it/s]/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/opt/conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  0%|          | 1/15895 [00:38<170:13:32, 38.56s/it]                                                     {'loss': 1.0223, 'learning_rate': 4.19287211740042e-07, 'epoch': 0.0}
+  0%|          | 1/15895 [00:38<170:13:32, 38.56s/it]  0%|          | 2/15895 [01:00<126:23:19, 28.63s/it]                                                     {'loss': 1.0756, 'learning_rate': 8.38574423480084e-07, 'epoch': 0.0}
+  0%|          | 2/15895 [01:00<126:23:19, 28.63s/it]  0%|          | 3/15895 [01:21<112:23:12, 25.46s/it]                                                     {'loss': 1.2733, 'learning_rate': 1.257861635220126e-06, 'epoch': 0.0}
+  0%|          | 3/15895 [01:21<112:23:12, 25.46s/it]  0%|          | 4/15895 [01:43<105:52:34, 23.99s/it]                                                     {'loss': 1.1508, 'learning_rate': 1.677148846960168e-06, 'epoch': 0.0}
+  0%|          | 4/15895 [01:43<105:52:34, 23.99s/it]  0%|          | 5/15895 [02:06<103:36:32, 23.47s/it]                                                     {'loss': 1.1595, 'learning_rate': 2.09643605870021e-06, 'epoch': 0.0}
+  0%|          | 5/15895 [02:06<103:36:32, 23.47s/it]  0%|          | 6/15895 [02:27<101:02:59, 22.90s/it]                                                     {'loss': 1.1959, 'learning_rate': 2.515723270440252e-06, 'epoch': 0.0}
+  0%|          | 6/15895 [02:27<101:02:59, 22.90s/it]  0%|          | 7/15895 [02:49<99:26:20, 22.53s/it]                                                     {'loss': 1.1095, 'learning_rate': 2.935010482180294e-06, 'epoch': 0.0}
+  0%|          | 7/15895 [02:49<99:26:20, 22.53s/it]  0%|          | 8/15895 [03:11<98:16:13, 22.27s/it]                                                    {'loss': 1.0196, 'learning_rate': 3.354297693920336e-06, 'epoch': 0.0}
+  0%|          | 8/15895 [03:11<98:16:13, 22.27s/it]  0%|          | 9/15895 [03:33<97:33:31, 22.11s/it]                                                    {'loss': 1.0025, 'learning_rate': 3.7735849056603773e-06, 'epoch': 0.0}
+  0%|          | 9/15895 [03:33<97:33:31, 22.11s/it]Token indices sequence length is longer than the specified maximum sequence length for this model (3771 > 2560). Running this sequence through the model will result in indexing errors
+  0%|          | 10/15895 [03:55<97:08:11, 22.01s/it]                                                     {'loss': 0.9904, 'learning_rate': 4.19287211740042e-06, 'epoch': 0.0}
+  0%|          | 10/15895 [03:55<97:08:11, 22.01s/it]  0%|          | 11/15895 [04:16<96:39:24, 21.91s/it]                                                     {'loss': 1.0481, 'learning_rate': 4.612159329140462e-06, 'epoch': 0.0}
+  0%|          | 11/15895 [04:16<96:39:24, 21.91s/it]  0%|          | 12/15895 [04:38<96:20:23, 21.84s/it]                                                     {'loss': 1.0496, 'learning_rate': 5.031446540880504e-06, 'epoch': 0.0}
+  0%|          | 12/15895 [04:38<96:20:23, 21.84s/it]  0%|          | 13/15895 [05:00<97:21:09, 22.07s/it]                                                     {'loss': 0.9346, 'learning_rate': 5.4507337526205454e-06, 'epoch': 0.0}
+  0%|          | 13/15895 [05:00<97:21:09, 22.07s/it]  0%|          | 14/15895 [05:23<97:58:36, 22.21s/it]                                                     {'loss': 0.9684, 'learning_rate': 5.870020964360588e-06, 'epoch': 0.0}
+  0%|          | 14/15895 [05:23<97:58:36, 22.21s/it]  0%|          | 15/15895 [05:45<98:17:38, 22.28s/it]                                                     {'loss': 0.9072, 'learning_rate': 6.289308176100629e-06, 'epoch': 0.0}
+  0%|          | 15/15895 [05:45<98:17:38, 22.28s/it]  0%|          | 16/15895 [06:07<97:31:36, 22.11s/it]                                                     {'loss': 0.8828, 'learning_rate': 6.708595387840672e-06, 'epoch': 0.0}
+  0%|          | 16/15895 [06:07<97:31:36, 22.11s/it]  0%|          | 17/15895 [06:29<96:59:31, 21.99s/it]                                                     {'loss': 0.88, 'learning_rate': 7.127882599580712e-06, 'epoch': 0.0}
+  0%|          | 17/15895 [06:29<96:59:31, 21.99s/it]  0%|          | 18/15895 [06:51<96:44:49, 21.94s/it]                                                     {'loss': 0.8906, 'learning_rate': 7.547169811320755e-06, 'epoch': 0.0}
+  0%|          | 18/15895 [06:51<96:44:49, 21.94s/it]  0%|          | 19/15895 [07:12<96:27:59, 21.87s/it]                                                     {'loss': 0.8687, 'learning_rate': 7.966457023060797e-06, 'epoch': 0.0}
+  0%|          | 19/15895 [07:12<96:27:59, 21.87s/it]  0%|          | 20/15895 [07:35<97:21:24, 22.08s/it]                                                     {'loss': 0.802, 'learning_rate': 8.38574423480084e-06, 'epoch': 0.0}
+  0%|          | 20/15895 [07:35<97:21:24, 22.08s/it]  0%|          | 21/15895 [07:57<96:50:52, 21.96s/it]                                                     {'loss': 0.8094, 'learning_rate': 8.80503144654088e-06, 'epoch': 0.0}
+  0%|          | 21/15895 [07:57<96:50:52, 21.96s/it]  0%|          | 22/15895 [08:19<97:37:52, 22.14s/it]                                                     {'loss': 0.7864, 'learning_rate': 9.224318658280923e-06, 'epoch': 0.0}
+  0%|          | 22/15895 [08:19<97:37:52, 22.14s/it]  0%|          | 23/15895 [08:41<97:34:08, 22.13s/it]                                                     {'loss': 0.8746, 'learning_rate': 9.643605870020965e-06, 'epoch': 0.0}
+  0%|          | 23/15895 [08:41<97:34:08, 22.13s/it]  0%|          | 24/15895 [09:03<96:58:28, 22.00s/it]                                                     {'loss': 0.7914, 'learning_rate': 1.0062893081761008e-05, 'epoch': 0.0}
+  0%|          | 24/15895 [09:03<96:58:28, 22.00s/it]  0%|          | 25/15895 [09:26<97:44:00, 22.17s/it]                                                     {'loss': 0.8396, 'learning_rate': 1.0482180293501048e-05, 'epoch': 0.0}
+  0%|          | 25/15895 [09:26<97:44:00, 22.17s/it]  0%|          | 26/15895 [09:48<97:27:42, 22.11s/it]                                                     {'loss': 0.7996, 'learning_rate': 1.0901467505241091e-05, 'epoch': 0.0}
+  0%|          | 26/15895 [09:48<97:27:42, 22.11s/it]  0%|          | 27/15895 [10:09<96:56:52, 21.99s/it]                                                     {'loss': 0.7405, 'learning_rate': 1.1320754716981132e-05, 'epoch': 0.0}
+  0%|          | 27/15895 [10:09<96:56:52, 21.99s/it]  0%|          | 28/15895 [10:32<97:36:03, 22.14s/it]                                                     {'loss': 0.7719, 'learning_rate': 1.1740041928721176e-05, 'epoch': 0.0}
+  0%|          | 28/15895 [10:32<97:36:03, 22.14s/it]  0%|          | 29/15895 [10:54<98:10:18, 22.28s/it]                                                     {'loss': 0.7182, 'learning_rate': 1.2159329140461215e-05, 'epoch': 0.0}
+  0%|          | 29/15895 [10:54<98:10:18, 22.28s/it]  0%|          | 30/15895 [11:16<97:24:42, 22.10s/it]                                                     {'loss': 0.8138, 'learning_rate': 1.2578616352201259e-05, 'epoch': 0.0}
+  0%|          | 30/15895 [11:16<97:24:42, 22.10s/it]  0%|          | 31/15895 [11:38<97:07:18, 22.04s/it]                                                     {'loss': 0.7677, 'learning_rate': 1.29979035639413e-05, 'epoch': 0.0}
+  0%|          | 31/15895 [11:38<97:07:18, 22.04s/it]  0%|          | 32/15895 [12:00<97:10:07, 22.05s/it]                                                     {'loss': 0.7596, 'learning_rate': 1.3417190775681343e-05, 'epoch': 0.0}
+  0%|          | 32/15895 [12:00<97:10:07, 22.05s/it]  0%|          | 33/15895 [12:23<97:49:27, 22.20s/it]                                                     {'loss': 0.6886, 'learning_rate': 1.3836477987421385e-05, 'epoch': 0.0}
+  0%|          | 33/15895 [12:23<97:49:27, 22.20s/it]  0%|          | 34/15895 [12:44<97:06:24, 22.04s/it]                                                     {'loss': 0.7643, 'learning_rate': 1.4255765199161425e-05, 'epoch': 0.0}
+  0%|          | 34/15895 [12:44<97:06:24, 22.04s/it]  0%|          | 35/15895 [13:07<97:49:08, 22.20s/it]                                                     {'loss': 0.8136, 'learning_rate': 1.467505241090147e-05, 'epoch': 0.0}
+  0%|          | 35/15895 [13:07<97:49:08, 22.20s/it]  0%|          | 36/15895 [13:29<97:11:30, 22.06s/it]                                                     {'loss': 0.7453, 'learning_rate': 1.509433962264151e-05, 'epoch': 0.0}
+  0%|          | 36/15895 [13:29<97:11:30, 22.06s/it]  0%|          | 37/15895 [13:50<96:46:48, 21.97s/it]                                                     {'loss': 0.8233, 'learning_rate': 1.5513626834381552e-05, 'epoch': 0.0}
+  0%|          | 37/15895 [13:50<96:46:48, 21.97s/it]  0%|          | 38/15895 [14:12<96:28:28, 21.90s/it]                                                     {'loss': 0.7497, 'learning_rate': 1.5932914046121594e-05, 'epoch': 0.0}
+  0%|          | 38/15895 [14:12<96:28:28, 21.90s/it]  0%|          | 39/15895 [14:34<96:14:35, 21.85s/it]                                                     {'loss': 0.7383, 'learning_rate': 1.6352201257861635e-05, 'epoch': 0.0}
+  0%|          | 39/15895 [14:34<96:14:35, 21.85s/it]  0%|          | 40/15895 [14:56<97:12:54, 22.07s/it]                                                     {'loss': 0.7235, 'learning_rate': 1.677148846960168e-05, 'epoch': 0.0}
+  0%|          | 40/15895 [14:56<97:12:54, 22.07s/it]  0%|          | 41/15895 [15:18<96:47:23, 21.98s/it]                                                     {'loss': 0.7102, 'learning_rate': 1.719077568134172e-05, 'epoch': 0.0}
+  0%|          | 41/15895 [15:18<96:47:23, 21.98s/it]  0%|          | 42/15895 [15:40<96:23:34, 21.89s/it]                                                     {'loss': 0.7678, 'learning_rate': 1.761006289308176e-05, 'epoch': 0.0}
+  0%|          | 42/15895 [15:40<96:23:34, 21.89s/it]  0%|          | 43/15895 [16:02<96:35:26, 21.94s/it]                                                     {'loss': 0.7258, 'learning_rate': 1.8029350104821805e-05, 'epoch': 0.0}
+  0%|          | 43/15895 [16:02<96:35:26, 21.94s/it]  0%|          | 44/15895 [16:24<96:25:23, 21.90s/it]                                                     {'loss': 0.6434, 'learning_rate': 1.8448637316561846e-05, 'epoch': 0.0}
+  0%|          | 44/15895 [16:24<96:25:23, 21.90s/it]  0%|          | 45/15895 [16:45<96:12:02, 21.85s/it]                                                     {'loss': 0.697, 'learning_rate': 1.8867924528301888e-05, 'epoch': 0.0}
+  0%|          | 45/15895 [16:45<96:12:02, 21.85s/it][2024-11-08 23:07:13,055] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 1990
+[2024-11-08 23:07:13,958] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 1991
+[2024-11-08 23:07:13,960] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 1992
+[2024-11-08 23:07:13,962] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 1993
+[2024-11-08 23:07:13,964] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 1994
+[2024-11-08 23:07:13,966] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 1995
+[2024-11-08 23:07:13,967] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 1996
+[2024-11-08 23:07:13,969] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 1997
+[2024-11-08 23:07:15,718] [INFO] [launch.py:324:sigkill_handler] Main process received SIGTERM, exiting

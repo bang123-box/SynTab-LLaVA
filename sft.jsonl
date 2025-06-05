@@ -1,0 +1,2 @@
+{"qa_file":"your_path/Table-LLaVA/LLaVA-Finetune/MMTab-instruct_sft_data_llava_format_232K.json", "image_dir":"your_path/Table-LLaVA/LLaVA-Finetune/images"}
+{"qa_file":"your_path/SynTab-Data/sft.json", "image_dir":"your_path/SynTab-Data/"}

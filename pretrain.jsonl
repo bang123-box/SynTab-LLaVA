@@ -1,0 +1,2 @@
+{"qa_file":"your_path/Table-LLaVA/LLaVA-Pretrain/enhanced_llava_pretrain_data_708K.json", "image_dir":"your_path/Table-LLaVA/LLaVA-Pretrain/images"}
+{"qa_file":"your_path/SynTab-Data/pretrain.json", "image_dir":"your_path/SynTab-Data"}

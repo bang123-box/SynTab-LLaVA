@@ -1,0 +1,99 @@
+[2024-10-13 10:36:57,768] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-10-13 10:36:59,346] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-10-13 10:36:59,346] [INFO] [runner.py:571:main] cmd = /opt/conda/envs/llava/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgMywgNCwgNSwgNiwgN119 --master_addr=127.0.0.1 --master_port=20056 --enable_each_rank_log=None llava/train/train_mem.py --lora_enable True --lora_r 128 --lora_alpha 256 --mm_projector_lr 2e-5 --deepspeed ./scripts/zero3.json --model_name_or_path /home/zbb/modelscope/hub/models--lmsys--vicuna-7b-v1.5/snapshots/3321f76e3f527bd14065daf69dad9344000a201d --version v1 --data_path sft.jsonl --image_folder none --highres_vision_tower /home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536 --lowres_vision_tower /home/zbb/modelscope/hub/clip-vit-large-patch14-336 --pretrain_mm_mlp_adapter ./pretrained_mm_projector/Pre_MP_630K_7b_Conv_Clip/mm_projector.bin --mm_projector_type mlp2x_gelu --mm_vision_select_layer -2 --mm_use_im_start_end False --mm_use_im_patch_token False --image_aspect_ratio pad --group_by_modality_length True --bf16 True --output_dir ./checkpoints/Pre_MP_630K_7b_Sftlora_MS_556k_Conv_Clip_llava --num_train_epochs 1 --per_device_train_batch_size 8 --per_device_eval_batch_size 4 --gradient_accumulation_steps 2 --evaluation_strategy no --save_strategy steps --save_steps 3000 --save_total_limit 1 --learning_rate 2e-5 --weight_decay 0. --warmup_ratio 0.03 --lr_scheduler_type cosine --logging_steps 1 --tf32 True --model_max_length 2560 --gradient_checkpointing True --dataloader_num_workers 4 --lazy_preprocess True --report_to none
+[2024-10-13 10:37:01,389] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-10-13 10:37:02,846] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_PACKAGE_VERSION=2.17.1-1
+[2024-10-13 10:37:02,847] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_DEV_PACKAGE_VERSION=2.17.1-1
+[2024-10-13 10:37:02,847] [INFO] [launch.py:138:main] 0 NCCL_P2P_LEVEL=NVL
+[2024-10-13 10:37:02,847] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_PACKAGE_NAME=libnccl2
+[2024-10-13 10:37:02,847] [INFO] [launch.py:138:main] 0 NCCL_P2P_DISABLE=1
+[2024-10-13 10:37:02,847] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_DEV_PACKAGE_NAME=libnccl-dev
+[2024-10-13 10:37:02,847] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_PACKAGE=libnccl2=2.17.1-1+cuda12.1
+[2024-10-13 10:37:02,847] [INFO] [launch.py:138:main] 0 NV_LIBNCCL_DEV_PACKAGE=libnccl-dev=2.17.1-1+cuda12.1
+[2024-10-13 10:37:02,847] [INFO] [launch.py:138:main] 0 NCCL_VERSION=2.17.1-1
+[2024-10-13 10:37:02,847] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3, 4, 5, 6, 7]}
+[2024-10-13 10:37:02,847] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=8, node_rank=0
+[2024-10-13 10:37:02,847] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3, 4, 5, 6, 7]})
+[2024-10-13 10:37:02,847] [INFO] [launch.py:163:main] dist_world_size=8
+[2024-10-13 10:37:02,847] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+[2024-10-13 10:37:05,976] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-10-13 10:37:05,987] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-10-13 10:37:06,007] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-10-13 10:37:06,014] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-10-13 10:37:06,018] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-10-13 10:37:06,023] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-10-13 10:37:06,026] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-10-13 10:37:06,050] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Traceback (most recent call last):
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train_mem.py", line 1, in <module>
+    from llava.train.train import train
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train.py", line 32, in <module>
+    from llava.train.llava_trainer import LLaVATrainer
+  File "/home/zbb/code/Mix_LLaVA/llava/train/llava_trainer.py", line 6, in <module>
+    from llava.train.train import get_peft_state_maybe_zero_3, get_peft_state_non_lora_maybe_zero_3
+ImportError: cannot import name 'get_peft_state_maybe_zero_3' from partially initialized module 'llava.train.train' (most likely due to a circular import) (/home/zbb/code/Mix_LLaVA/llava/train/train.py)
+Traceback (most recent call last):
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train_mem.py", line 1, in <module>
+    from llava.train.train import train
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train.py", line 32, in <module>
+    from llava.train.llava_trainer import LLaVATrainer
+  File "/home/zbb/code/Mix_LLaVA/llava/train/llava_trainer.py", line 6, in <module>
+    from llava.train.train import get_peft_state_maybe_zero_3, get_peft_state_non_lora_maybe_zero_3
+ImportError: cannot import name 'get_peft_state_maybe_zero_3' from partially initialized module 'llava.train.train' (most likely due to a circular import) (/home/zbb/code/Mix_LLaVA/llava/train/train.py)
+Traceback (most recent call last):
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train_mem.py", line 1, in <module>
+    from llava.train.train import train
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train.py", line 32, in <module>
+    from llava.train.llava_trainer import LLaVATrainer
+  File "/home/zbb/code/Mix_LLaVA/llava/train/llava_trainer.py", line 6, in <module>
+    from llava.train.train import get_peft_state_maybe_zero_3, get_peft_state_non_lora_maybe_zero_3
+ImportError: cannot import name 'get_peft_state_maybe_zero_3' from partially initialized module 'llava.train.train' (most likely due to a circular import) (/home/zbb/code/Mix_LLaVA/llava/train/train.py)
+Traceback (most recent call last):
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train_mem.py", line 1, in <module>
+    from llava.train.train import train
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train.py", line 32, in <module>
+    from llava.train.llava_trainer import LLaVATrainer
+  File "/home/zbb/code/Mix_LLaVA/llava/train/llava_trainer.py", line 6, in <module>
+    from llava.train.train import get_peft_state_maybe_zero_3, get_peft_state_non_lora_maybe_zero_3
+ImportError: cannot import name 'get_peft_state_maybe_zero_3' from partially initialized module 'llava.train.train' (most likely due to a circular import) (/home/zbb/code/Mix_LLaVA/llava/train/train.py)
+Traceback (most recent call last):
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train_mem.py", line 1, in <module>
+    from llava.train.train import train
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train.py", line 32, in <module>
+    from llava.train.llava_trainer import LLaVATrainer
+  File "/home/zbb/code/Mix_LLaVA/llava/train/llava_trainer.py", line 6, in <module>
+    from llava.train.train import get_peft_state_maybe_zero_3, get_peft_state_non_lora_maybe_zero_3
+ImportError: cannot import name 'get_peft_state_maybe_zero_3' from partially initialized module 'llava.train.train' (most likely due to a circular import) (/home/zbb/code/Mix_LLaVA/llava/train/train.py)
+Traceback (most recent call last):
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train_mem.py", line 1, in <module>
+    from llava.train.train import train
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train.py", line 32, in <module>
+    from llava.train.llava_trainer import LLaVATrainer
+  File "/home/zbb/code/Mix_LLaVA/llava/train/llava_trainer.py", line 6, in <module>
+    from llava.train.train import get_peft_state_maybe_zero_3, get_peft_state_non_lora_maybe_zero_3
+ImportError: cannot import name 'get_peft_state_maybe_zero_3' from partially initialized module 'llava.train.train' (most likely due to a circular import) (/home/zbb/code/Mix_LLaVA/llava/train/train.py)
+Traceback (most recent call last):
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train_mem.py", line 1, in <module>
+    from llava.train.train import train
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train.py", line 32, in <module>
+    from llava.train.llava_trainer import LLaVATrainer
+  File "/home/zbb/code/Mix_LLaVA/llava/train/llava_trainer.py", line 6, in <module>
+    from llava.train.train import get_peft_state_maybe_zero_3, get_peft_state_non_lora_maybe_zero_3
+ImportError: cannot import name 'get_peft_state_maybe_zero_3' from partially initialized module 'llava.train.train' (most likely due to a circular import) (/home/zbb/code/Mix_LLaVA/llava/train/train.py)
+Traceback (most recent call last):
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train_mem.py", line 1, in <module>
+    from llava.train.train import train
+  File "/home/zbb/code/Mix_LLaVA/llava/train/train.py", line 32, in <module>
+    from llava.train.llava_trainer import LLaVATrainer
+  File "/home/zbb/code/Mix_LLaVA/llava/train/llava_trainer.py", line 6, in <module>
+    from llava.train.train import get_peft_state_maybe_zero_3, get_peft_state_non_lora_maybe_zero_3
+ImportError: cannot import name 'get_peft_state_maybe_zero_3' from partially initialized module 'llava.train.train' (most likely due to a circular import) (/home/zbb/code/Mix_LLaVA/llava/train/train.py)
+[2024-10-13 10:37:07,855] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 12742
+[2024-10-13 10:37:07,855] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 12743
+[2024-10-13 10:37:07,857] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 12744
+[2024-10-13 10:37:07,859] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 12745
+[2024-10-13 10:37:07,860] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 12746
+[2024-10-13 10:37:07,861] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 12747
+[2024-10-13 10:37:07,862] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 12748
+[2024-10-13 10:37:07,863] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 12749
+[2024-10-13 10:37:07,865] [ERROR] [launch.py:321:sigkill_handler] ['/opt/conda/envs/llava/bin/python', '-u', 'llava/train/train_mem.py', '--local_rank=7', '--lora_enable', 'True', '--lora_r', '128', '--lora_alpha', '256', '--mm_projector_lr', '2e-5', '--deepspeed', './scripts/zero3.json', '--model_name_or_path', '/home/zbb/modelscope/hub/models--lmsys--vicuna-7b-v1.5/snapshots/3321f76e3f527bd14065daf69dad9344000a201d', '--version', 'v1', '--data_path', 'sft.jsonl', '--image_folder', 'none', '--highres_vision_tower', '/home/zbb/modelscope/hub/ConvLLaVA-ConvNeXt-1536', '--lowres_vision_tower', '/home/zbb/modelscope/hub/clip-vit-large-patch14-336', '--pretrain_mm_mlp_adapter', './pretrained_mm_projector/Pre_MP_630K_7b_Conv_Clip/mm_projector.bin', '--mm_projector_type', 'mlp2x_gelu', '--mm_vision_select_layer', '-2', '--mm_use_im_start_end', 'False', '--mm_use_im_patch_token', 'False', '--image_aspect_ratio', 'pad', '--group_by_modality_length', 'True', '--bf16', 'True', '--output_dir', './checkpoints/Pre_MP_630K_7b_Sftlora_MS_556k_Conv_Clip_llava', '--num_train_epochs', '1', '--per_device_train_batch_size', '8', '--per_device_eval_batch_size', '4', '--gradient_accumulation_steps', '2', '--evaluation_strategy', 'no', '--save_strategy', 'steps', '--save_steps', '3000', '--save_total_limit', '1', '--learning_rate', '2e-5', '--weight_decay', '0.', '--warmup_ratio', '0.03', '--lr_scheduler_type', 'cosine', '--logging_steps', '1', '--tf32', 'True', '--model_max_length', '2560', '--gradient_checkpointing', 'True', '--dataloader_num_workers', '4', '--lazy_preprocess', 'True', '--report_to', 'none'] exits with return code = 1
